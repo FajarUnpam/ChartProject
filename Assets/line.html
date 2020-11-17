@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+<!-- for fusion chart here -->
+		<script type="text/javascript" src="FusionChart/fusioncharts.charts.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.powercharts.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.gantt.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.maps.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.widgets.js"></script>
+	<!-- end -->
+	<!-- Type of fusionchart 
+	mscolumnline3d,line,msline,pareto3d,pie3d,stackedcolumn3dline,stackedbar3d
+	waterfall2d,msstepline,thermometer,radar,pie2d,msspline,mssplinearea,doughnut3d,kagi
+	-->
+<script type="text/javascript">
+FusionCharts.ready(function () {
+    var revenueChart = new FusionCharts({
+        type: 'line',
+        renderAt: 'chartContainer',
+        width: '100%',
+        height: '100%',
+        dataFormat: 'json',
+        dataSource: {
+    "chart": {
+        "caption": "Total footfall in Bakersfield Central",
+        "subCaption": "Last week",
+        "xAxisName": "Day",
+        "yAxisName": "No. of Visitors",
+        "lineThickness": "2",
+        "theme": "fusion"
+    },
+    "data": [
+        {
+            "label": "Mon",
+            "value": "15123"
+        },
+        {
+            "label": "Tue",
+            "value": "14233"
+        },
+        {
+            "label": "Wed",
+            "value": "23507"
+        },
+        {
+            "label": "Thu",
+            "value": "9110"
+        },
+        {
+            "label": "Fri",
+            "value": "15529"
+        },
+        {
+            "label": "Sat",
+            "value": "20803"
+        },
+        {
+            "label": "Sun",
+            "value": "19202"
+        }
+    ],
+    "trendlines": [
+        {
+            "line": [
+                {
+                    "startvalue": "18500",
+                    "color": "#1aaf5d",
+                    "displayvalue": "Average{br}weekly{br}footfall",
+                    "valueOnRight": "1",
+                    "thickness": "2"
+                }
+            ]
+        }
+    ]
+}
+	})
+    .render();
+	
+});
+</script>
+
+</head>
+<body>
+<div id="chartContainer" style="height: 400px; width: 100%;"></div>
+					
+</body>
+</html>

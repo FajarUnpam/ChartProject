@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+<!-- for fusion chart here -->
+		<script type="text/javascript" src="FusionChart/fusioncharts.charts.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.powercharts.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.gantt.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.maps.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.widgets.js"></script>
+	<!-- end -->
+	<!-- Type of fusionchart 
+	mscolumnline3d,line,msline,pareto3d,pie3d,stackedcolumn3dline,stackedbar3d
+	waterfall2d,msstepline,thermometer,radar,pie2d,msspline,mssplinearea,doughnut3d,kagi
+	-->
+<script type="text/javascript">
+FusionCharts.ready(function () {
+    var revenueChart = new FusionCharts({
+        type: 'mscolumnline3d',
+        renderAt: 'chartContainer',
+        width: '100%',
+        height: '100%',
+        dataFormat: 'json',
+        dataSource: {
+            "chart": {
+               
+                "subCaption": "Effective Implementation of safety oversight systems",
+                "xAxisname": "Location",
+                "pYAxisName": "Audit Tahun 2019",
+                
+                "numberPrefix": "",
+                "sNumberSuffix": "%",
+                "sYAxisMaxValue": "25",
+                
+                "paletteColors": "#0075c2,#ed0303,#f2c500",
+                "bgColor": "#ffffff",                
+                "showBorder": "0",
+                "showCanvasBorder": "0",
+                "usePlotGradientColor": "0",
+                "plotBorderAlpha": "10",
+                "legendBorderAlpha": "0",
+                "legendBgAlpha": "0",
+                "legendShadow": "0",
+                "showHoverEffect":"1",
+                "exportEnabled":"1",
+                "valueFontColor": "#ffffff",
+                "rotateValues": "1",
+                "placeValuesInside": "1",
+                "divlineColor": "#999999",
+                "divLineIsDashed": "1",
+                "divLineDashLen": "1",
+                "divLineGapLen": "1",
+                "canvasBgColor": "#ffffff",
+                "captionFontSize": "14",
+                "subcaptionFontSize": "14",
+                "subcaptionFontBold": "0"
+            },
+            "categories": [
+                {
+                    "category": [
+					 {"label": "Nabire"}, {"label": "Dekai"}, {"label": "Ende"}, {"label": "Hang Nadim"}, {"label": "Ilaga"}, {"label": "JATSC"}, {"label": "Juanda"}, {"label": "Kaimana"}, {"label": "Kantor SAR Banten"}, {"label": "Kantor SAR Gorontalo"}, {"label": "Kantor SAR Jakarta"}                    ]
+                }
+            ],
+            "dataset": [
+                {
+                    "seriesname": "Satisfactory",
+                    "data": [
+                       {"value": "122"}, {"value": "0"}, {"value": "117"}, {"value": "130"}, {"value": "0"}, {"value": "137"}, {"value": "146"}, {"value": "0"}, {"value": "0"}, {"value": "0"}, {"value": "0"}                    ]
+                },
+                {
+                    "seriesname": "Not Satisfactory",
+                    "data": [
+                      {"value": "5"},{"value": "0"},{"value": "10"},{"value": "2"},{"value": "0"},{"value": "13"},{"value": "1"},{"value": "0"},{"value": "0"},{"value": "0"},{"value": "0"}                    ]
+                },
+                {
+                    "seriesname": "Not Aplicable",
+                    "data": [
+                      {"value": "30"},{"value": "0"},{"value": "30"},{"value": "25"},{"value": "0"},{"value": "7"},{"value": "10"},{"value": "0"},{"value": "0"},{"value": "0"},{"value": "0"}                    ]
+                },
+                {
+                    "seriesname": "Rata-rata pemenuhan audit tahun 2019",
+                    "renderAs": "line",
+                  
+                    "data": [
+                       {"value": "127.25"}, {"value": "127.25"}, {"value": "127.25"}, {"value": "127.25"}, {"value": "127.25"}, {"value": "127.25"}, {"value": "127.25"}, {"value": "127.25"}, {"value": "127.25"}, {"value": "127.25"}, {"value": "127.25"}                    ]
+                }
+            ]
+        }
+    })
+    .render();
+	
+});
+</script>
+
+</head>
+<body>
+<div id="chartContainer" style="height: 400px; width: 100%;"></div>
+					
+</body>
+</html>

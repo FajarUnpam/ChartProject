@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+<!-- for fusion chart here -->
+		<script type="text/javascript" src="FusionChart/fusioncharts.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.powercharts.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.gantt.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.maps.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.widgets.js"></script>
+	<!-- end -->
+	<!-- Type of fusionchart 
+	mscolumnline3d,line,msline,pareto3d,pie3d,stackedcolumn3dline,stackedbar3d
+	waterfall2d,msstepline,thermometer,radar,pie2d,msspline,mssplinearea,doughnut3d,kagi
+	-->
+<script type="text/javascript">
+FusionCharts.ready(function () {
+    var revenueChart = new FusionCharts({
+        type: 'column3d',
+        renderAt: 'chartContainer',
+        width: '100%',
+        height: '100%',
+        dataFormat: 'json',
+        dataSource: {
+    "chart": {
+        "caption": "Monthly revenue for last year",
+        "subCaption": "Harry's SuperMart",
+        "xAxisName": "Month",
+        "yAxisName": "Revenues (In USD)",
+        "theme": "fusion"
+    },
+    "data": [
+        {"label": "Jan","value": "420000"}
+		,{"label": "Feb","value": "810000"}
+		,{"label": "Mar","value": "720000"}
+		,
+        {
+            "label": "Apr",
+            "value": "550000"
+        },
+        {
+            "label": "May",
+            "value": "910000"
+        },
+        {
+            "label": "Jun",
+            "value": "510000"
+        },
+        {
+            "label": "Jul",
+            "value": "680000"
+        },
+        {
+            "label": "Aug",
+            "value": "620000"
+        },
+        {
+            "label": "Sep",
+            "value": "610000"
+        },
+        {
+            "label": "Oct",
+            "value": "490000"
+        },
+        {
+            "label": "Nov",
+            "value": "900000"
+        },
+        {
+            "label": "Dec",
+            "value": "730000"
+        }
+    ],
+    "trendlines": [
+        {
+            "line": [
+                {
+                    "startvalue": "170220",
+                    "color": "#6baa01",
+                    "valueOnRight": "1",
+                    "displayvalue": "Average"
+                }
+            ]
+        }
+    ]
+	
+}
+    })
+    .render();
+	
+});
+</script>
+
+</head>
+<body>
+<div id="chartContainer" style="height: 400px; width: 100%;"></div>
+					
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+<!-- for fusion chart here -->
+		
+        <script type="text/javascript" src="FusionChart/fusioncharts.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.powercharts.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.gantt.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.maps.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.widgets.js"></script>
+	<!-- end -->
+	<!-- Type of fusionchart 
+	mscolumnline3d,line,msline,pareto3d,pie3d,stackedcolumn3dline,stackedbar3d
+	waterfall2d,msstepline,thermometer,radar,pie2d,msspline,mssplinearea,doughnut3d,kagi
+	-->
+<script type="text/javascript">
+FusionCharts.ready(function () {
+    var revenueChart = new FusionCharts({
+        type: 'pie3d',
+        renderAt: 'chartContainer',
+        width: '100%',
+        height: '100%',
+        dataFormat: 'json',
+        dataSource: {
+    "chart": {
+        "caption": "Split of Visitors by Age Group",
+        "subCaption": "Last year",
+        "enableSmartLabels": "0",
+        "startingAngle": "0",
+        "showPercentValues": "1",
+        "decimals": "1",
+        "useDataPlotColorForLabels": "1",
+        "theme": "fusion"
+    },
+    "data": [
+        {
+            "label": "Teenage",
+            "value": "1250400"
+        },
+        {
+            "label": "Adult",
+            "value": "1463300"
+        },
+        {
+            "label": "Mid-age",
+            "value": "1050700"
+        },
+        {
+            "label": "Senior",
+            "value": "491000"
+        }
+    ]
+}
+
+	})
+    .render();
+	
+});
+</script>
+
+</head>
+<body>
+<div id="chartContainer" style="height: 400px; width: 100%;"></div>
+					
+</body>
+</html>

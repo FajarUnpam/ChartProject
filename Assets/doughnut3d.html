@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+<!-- for fusion chart here -->
+		<script type="text/javascript" src="FusionChart/fusioncharts.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.powercharts.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.gantt.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.maps.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.widgets.js"></script>
+	<!-- end -->
+	<!-- Type of fusionchart 
+	mscolumnline3d,line,msline,pareto3d,pie3d,stackedcolumn3dline,stackedbar3d
+	waterfall2d,msstepline,thermometer,radar,pie2d,msspline,mssplinearea,doughnut3d,kagi
+	-->
+<script type="text/javascript">
+FusionCharts.ready(function () {
+    var revenueChart = new FusionCharts({
+        type: 'doughnut3d',
+        renderAt: 'chartContainer',
+        width: '100%',
+        height: '100%',
+        dataFormat: 'json',
+        dataSource: {
+    "chart": {
+        "caption": "Split of Revenue by Product Categories",
+        "subCaption": "Last year",
+        "numberPrefix": "$",
+        "theme": "fusion"
+    },
+    "data": [
+        {
+            "label": "Food",
+            "value": "28504"
+        },
+        {
+            "label": "Apparels",
+            "value": "14633"
+        },
+        {
+            "label": "Electronics",
+            "value": "10507"
+        },
+        {
+            "label": "Household",
+            "value": "4910"
+        }
+    ]
+}
+    })
+    .render();
+	
+});
+</script>
+
+</head>
+<body>
+<div id="chartContainer" style="height: 400px; width: 100%;"></div>
+					
+</body>
+</html>

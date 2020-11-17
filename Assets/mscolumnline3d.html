@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+<!-- for fusion chart here -->
+		
+        <script type="text/javascript" src="FusionChart/fusioncharts.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.powercharts.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.gantt.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.maps.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.widgets.js"></script>
+	<!-- end -->
+	<!-- Type of fusionchart 
+	mscolumnline3d,line,msline,pareto3d,pie3d,stackedcolumn3dline,stackedbar3d
+	waterfall2d,msstepline,thermometer,radar,pie2d,msspline,mssplinearea,doughnut3d,kagi
+	-->
+<script type="text/javascript">
+FusionCharts.ready(function () {
+    var revenueChart = new FusionCharts({
+        type: 'mscolumnline3d',
+        renderAt: 'chartContainer',
+        width: '100%',
+        height: '100%',
+        dataFormat: 'json',
+        dataSource: {
+    "chart": {
+        "showvalues": "0",
+        "caption": "Cost Analysis",
+        "numberprefix": "$",
+        "xaxisname": "Quarters",
+        "yaxisname": "Cost",
+        "theme": "fusion"
+    },
+    "categories": [
+        {
+            "category": [
+                {
+                    "label": "Quarter 1"
+                },
+                {
+                    "label": "Quarter 2"
+                },
+                {
+                    "label": "Quarter 3"
+                },
+                {
+                    "label": "Quarter 4"
+                }
+            ]
+        }
+    ],
+    "dataset": [
+        {
+            "seriesname": "Fixed Cost",
+            "data": [
+                {
+                    "value": "235000"
+                },
+                {
+                    "value": "225100"
+                },
+                {
+                    "value": "222000"
+                },
+                {
+                    "value": "230500"
+                }
+            ]
+        },
+        {
+            "seriesname": "Variable Cost",
+            "data": [
+                {
+                    "value": "230000"
+                },
+                {
+                    "value": "143000"
+                },
+                {
+                    "value": "198000"
+                },
+                {
+                    "value": "327600"
+                }
+            ]
+        },
+        {
+            "seriesname": "Budgeted cost",
+            "renderas": "Line",
+            "data": [
+                {
+                    "value": "455000"
+                },
+                {
+                    "value": "334000"
+                },
+                {
+                    "value": "426000"
+                },
+                {
+                    "value": "403000"
+                }
+            ]
+        }
+    ]
+}
+
+
+	})
+    .render();
+	
+});
+</script>
+
+</head>
+<body>
+<div id="chartContainer" style="height: 400px; width: 100%;"></div>
+					
+</body>
+</html>

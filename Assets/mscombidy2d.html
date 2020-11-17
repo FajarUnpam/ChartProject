@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+<!-- for fusion chart here -->
+		
+        <script type="text/javascript" src="FusionChart/fusioncharts.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.powercharts.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.gantt.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.maps.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.widgets.js"></script>
+	<!-- end -->
+	<!-- Type of fusionchart 
+	mscolumnline3d,line,msline,pareto3d,pie3d,stackedcolumn3dline,stackedbar3d
+	waterfall2d,msstepline,thermometer,radar,pie2d,msspline,mssplinearea,doughnut3d,kagi
+	-->
+<script type="text/javascript">
+FusionCharts.ready(function () {
+    var revenueChart = new FusionCharts({
+        type: 'mscombidy2d',
+        renderAt: 'chartContainer',
+        width: '100%',
+        height: '100%',
+        dataFormat: 'json',
+        dataSource: {
+    "chart": {
+        "caption": "Revenues and Profits",
+        "subCaption": "For last year",
+        "xAxisname": "Month",
+        "pYAxisName": "Amount (In USD)",
+        "sYAxisName": "Profit %",
+        "numberPrefix": "$",
+        "sNumberSuffix": "%",
+        "sYAxisMaxValue": "50",
+        "theme": "fusion"
+    },
+    "categories": [
+        {
+            "category": [
+                {
+                    "label": "Jan"
+                },
+                {
+                    "label": "Feb"
+                },
+                {
+                    "label": "Mar"
+                },
+                {
+                    "label": "Apr"
+                },
+                {
+                    "label": "May"
+                },
+                {
+                    "label": "Jun"
+                },
+                {
+                    "label": "Jul"
+                },
+                {
+                    "label": "Aug"
+                },
+                {
+                    "label": "Sep"
+                },
+                {
+                    "label": "Oct"
+                },
+                {
+                    "label": "Nov"
+                },
+                {
+                    "label": "Dec"
+                }
+            ]
+        }
+    ],
+    "dataset": [
+        {
+            "seriesName": "Revenues",
+            "data": [
+                {
+                    "value": "16000"
+                },
+                {
+                    "value": "20000"
+                },
+                {
+                    "value": "18000"
+                },
+                {
+                    "value": "19000"
+                },
+                {
+                    "value": "15000"
+                },
+                {
+                    "value": "21000"
+                },
+                {
+                    "value": "16000"
+                },
+                {
+                    "value": "20000"
+                },
+                {
+                    "value": "17000"
+                },
+                {
+                    "value": "22000"
+                },
+                {
+                    "value": "19000"
+                },
+                {
+                    "value": "23000"
+                }
+            ]
+        },
+        {
+            "seriesName": "Profits",
+            "renderAs": "area",
+            "showValues": "0",
+            "data": [
+                {
+                    "value": "4000"
+                },
+                {
+                    "value": "5000"
+                },
+                {
+                    "value": "3000"
+                },
+                {
+                    "value": "4000"
+                },
+                {
+                    "value": "1000"
+                },
+                {
+                    "value": "7000"
+                },
+                {
+                    "value": "1000"
+                },
+                {
+                    "value": "4000"
+                },
+                {
+                    "value": "1000"
+                },
+                {
+                    "value": "8000"
+                },
+                {
+                    "value": "2000"
+                },
+                {
+                    "value": "7000"
+                }
+            ]
+        },
+        {
+            "seriesName": "Profit %",
+            "parentYAxis": "S",
+            "renderAs": "line",
+            "showValues": "0",
+            "data": [
+                {
+                    "value": "25"
+                },
+                {
+                    "value": "25"
+                },
+                {
+                    "value": "16.66"
+                },
+                {
+                    "value": "21.05"
+                },
+                {
+                    "value": "6.66"
+                },
+                {
+                    "value": "33.33"
+                },
+                {
+                    "value": "6.25"
+                },
+                {
+                    "value": "25"
+                },
+                {
+                    "value": "5.88"
+                },
+                {
+                    "value": "36.36"
+                },
+                {
+                    "value": "10.52"
+                },
+                {
+                    "value": "30.43"
+                }
+            ]
+        }
+    ]
+}
+
+
+	})
+    .render();
+	
+});
+</script>
+
+</head>
+<body>
+<div id="chartContainer" style="height: 400px; width: 100%;"></div>
+					
+</body>
+</html>

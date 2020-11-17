@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+<!-- for fusion chart here -->
+		
+        <script type="text/javascript" src="FusionChart/fusioncharts.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.powercharts.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.gantt.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.maps.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.widgets.js"></script>
+	<!-- end -->
+	<!-- Type of fusionchart 
+	mscolumnline3d,line,msline,pareto3d,pie3d,stackedcolumn3dline,stackedbar3d
+	waterfall2d,msstepline,thermometer,radar,pie2d,msspline,mssplinearea,doughnut3d,kagi
+	-->
+<script type="text/javascript">
+FusionCharts.ready(function () {
+    var revenueChart = new FusionCharts({
+        type: 'pareto3d',
+        renderAt: 'chartContainer',
+        width: '100%',
+        height: '100%',
+        dataFormat: 'json',
+        dataSource: {
+    "chart": {
+        "caption": "Employee late arrivals by reported cause",
+        "subCaption": "Last month",
+        "xAxisName": "Reported Cause",
+        "pYAxisName": "No. of Occurrence",
+        "sYAxisname": "Cumulative Percentage",
+        "theme": "fusion"
+    },
+    "data": [
+        {
+            "label": "Traffic",
+            "value": "5680"
+        },
+        {
+            "label": "Family Engagement",
+            "value": "1036"
+        },
+        {
+            "label": "Public Transport",
+            "value": "950"
+        },
+        {
+            "label": "Weather",
+            "value": "500"
+        },
+        {
+            "label": "Emergency",
+            "value": "140"
+        },
+        {
+            "label": "Others",
+            "value": "68"
+        }
+    ]
+}
+
+
+	})
+    .render();
+	
+});
+</script>
+
+</head>
+<body>
+<div id="chartContainer" style="height: 400px; width: 100%;"></div>
+					
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+<!-- for fusion chart here -->
+		
+        <script type="text/javascript" src="FusionChart/fusioncharts.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.powercharts.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.gantt.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.maps.js"></script>
+        <script type="text/javascript" src="FusionChart/fusioncharts.widgets.js"></script>
+	<!-- end -->
+	<!-- Type of fusionchart 
+	mscolumnline3d,line,msline,pareto3d,pie3d,stackedcolumn3dline,stackedbar3d
+	waterfall2d,msstepline,thermometer,radar,pie2d,msspline,mssplinearea,doughnut3d,kagi
+	-->
+<script type="text/javascript">
+FusionCharts.ready(function () {
+    var revenueChart = new FusionCharts({
+        type: 'stackedbar3d',
+        renderAt: 'chartContainer',
+        width: '100%',
+        height: '100%',
+        dataFormat: 'json',
+        dataSource: {
+    "chart": {
+        "caption": "Product-wise quarterly revenue in last year",
+        "subCaption": "Harry's SuperMart",
+        "xAxisname": "Quarter",
+        "yAxisName": "Revenue (In USD)",
+        "numberPrefix": "$",
+        "theme": "fusion"
+    },
+    "categories": [
+        {
+            "category": [
+                {
+                    "label": "Q1"
+                },
+                {
+                    "label": "Q2"
+                },
+                {
+                    "label": "Q3"
+                },
+                {
+                    "label": "Q4"
+                }
+            ]
+        }
+    ],
+    "dataset": [
+        {
+            "seriesname": "Food Products",
+            "data": [
+                {
+                    "value": "121000"
+                },
+                {
+                    "value": "135000"
+                },
+                {
+                    "value": "123500"
+                },
+                {
+                    "value": "145000"
+                }
+            ]
+        },
+        {
+            "seriesname": "Non-Food Products",
+            "data": [
+                {
+                    "value": "131400"
+                },
+                {
+                    "value": "154800"
+                },
+                {
+                    "value": "98300"
+                },
+                {
+                    "value": "131800"
+                }
+            ]
+        }
+    ]
+}
+
+
+	})
+    .render();
+	
+});
+</script>
+
+</head>
+<body>
+<div id="chartContainer" style="height: 400px; width: 100%;"></div>
+					
+</body>
+</html>
